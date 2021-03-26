@@ -63,6 +63,27 @@ If all eigenvalues are zero, it is a singular matrix
 If eigenvalues are > 0, positive definite, >=0, positive semidefinite
 
 SINGULAR VALUE DECOMPOSITION
--It is a way too fectorize natrix into singular vectors and singular values.
+-It is a way to factorize matrix into singular vectors and singular values.
 Every matrix has SVD unlike EVD 
+
+TRACE OPERATOR
+-It gives sum of all diagonal entries of a matrix
+
+DETERMINANT
+-It is a function that maps matrics to real scalars. It is equal to product of all eigenvalues of matrix
+-The absolute value of determinant can be thoought as  a measure of how much multiplication by matrics expands or constracts space
+-If 0, contracted completely, if 1, volume is preserved
+
+PCA: Principal Component Analysis
+-can be derived using linear algebra
+-If we have collection of m points and want to apply lossy compresion i.e. storing info using less memory
+-Encode info in lower dimension, for each point in Rn, we find a encoding function to produce a point in Rl, l<n
+ and a decoding function to get back original info
+-PCA is defined by the choice of decoding function, to make it simple we use a matrix
+-To keep it easy, only orthogonal matrix is considered, different scales of msatrix possible, so its constrained
+ to keep each column to have unit norm decoder g(c) = Dc
+-To find our optimal code point c for each input, we minimize distance between x and g(c) using L2 norm
+-can also do of square of l2 norm i.e.(x-g(c))t(x-g(c)), after removing terms w/o c, coz min wrt c,
+to min min, we differentiate wrt c and =0. upon this and substrituoon of g as Dc, the final eq is 
+ c = Dtx
 
