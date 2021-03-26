@@ -1,0 +1,72 @@
+PROBABILITY
+
+Frequentist probability: given number of times, %times an event occurs like draing a ball
+Bayesian probability: related to qualitative levels of certainity, degree of belief e.g., while diagnosing patient
+Random variable: A variable that can take different values randomly, can be discrete or continuous
+Conditional proobability: Proabaility of y=y given x=x
+
+Chain rule
+-Any joint probabilty distribution over many variables can be decomposed into conditional distributions over one variable
+P (x(1), . . . , x(n)) = P (x(1))Πni=2P (x(i)| x(1), . . . , x(i−1)).
+
+1. Variation and Standard Deviation
+    Variance gives how spread-out the data is, it gives average of squared differences from mean
+    Standard deviation is root of variance. It is used to find outliers. Dta points that lie outside more than 1sd from mean is unusual.
+    Sample variance is divided by N-1 instead of N
+    N-1 is used to remove bias, its too biased to the sample
+
+2. Probabilty Density Function and Probability Mass Function
+    Distribution of probability of data point falling within a given range e.g. from mean to 1sd is 34%
+    For discrete data, we have probability mass Function i.e. probabilities of discrete data, its a histogram
+
+
+Joint probability distribution function
+P(X=x, y=y) is p thay x=x and y=y simaltaneously
+
+Probability distribution over a subset of variables is marginal probability distribution
+P(x=x)= sumovery(P(x=x,y=y))
+for continuous its integration of p(x,y)dy
+
+Expectations
+The expectation of some function f(x) wrt P(x) is average thay f takes on i.e. sum(P(x)f(x))
+for continous distribution, integration(p(x)f(x)dx)
+
+Covariance gives how much 2 values are related to each other
+Cov(f(x), g(y)) = E [(f(x) − E [f(x)]) (g(y) − E [g(y)])] 
+
+3. Uniform Distribution: equal probabilities of data occuring in any range P(x)= 1/k
+   Normal/ Gaussian Distribution: data is centered around the mean
+   Binomial Distribution:
+    -n trials
+    -trials are independent
+    -success or ffailure, probability of success same on each trial p
+    -total number of success is k
+    Its distribution from 0 to n is a binomial distribution
+    The shape of distribution depends on n and p, as shown in link https://www.maths.dur.ac.uk/stats/people/jac/singleb/notes2.pdf
+   Poisson Distribution:
+    -Binomial distribution is about counting success in fixed number of well-defined trials
+    -But in science there are open-end counts, unknown number of events
+    -Events occur at a rate of lambda
+    -Total number of events in time period is s
+
+Bayes rule
+-To know P(y/x) given P(x/y)
+-P(x/y) = P(x)P(y/x)/P(y)
+-P(y) = sum(P(x)P(y/x))
+
+Information theory
+-Less likely evemts give more Information
+-independent events give additional Information
+I(x) = -log(P(x))
+Shanon entropy H(x) = amount of uncertainity in a distribution
+H(x) = E(I(x)) = -E(log(P(x)))
+certain info = less entropy
+
+KL deviergence, Kulback-Leibler divergence
+-If 2 separate probability distribution P(x) and Q(x) over same random variable x, can measure how differnet those 2 distributions are
+Dkl(P||Q) = E[log(P|Q)] =E[log(P)-log(Q)]
+
+Structured probabilistic model / Graphical model
+-The nodes are the random variables
+-The edge means the probability distribution is able to represent direct interactions between the 2 variables
+Directed modesl: represent factorizations into continal proobability distributions
