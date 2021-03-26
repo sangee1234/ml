@@ -1,0 +1,68 @@
+Tensor: Array with more than 2 axes.
+
+Identity and inverse matrices
+can soolve Ax=b, by x=A-1b
+
+for A-1, AA-1=I must have one solution
+Its possible for equations to have any of infinite solutions
+sum(XiAi), where columnns of Ai is the diff directions to reach b, and x is how far to reach b, sum of it will give b
+
+Span: It is set of all points obtainable by linear combination of original vectoors
+For Ax-b, to have solution b must be in span of A, this is only possible if n>=m, i.e. dimenesion of A >=be
+
+It is possible 2 columns in A are identical, so its same as copy of one column, this is linear dependence.
+A set of vectors is linearly independent if no vector in the set is a linear combintaion of other vectors.
+So matrix must have m linearly independent columns.
+
+For Ax=b, to have an inverse there must be atmost one solution for each value of b. so n=m
+So it must be a square matrix n=m and all columns independent.
+
+Singular matrix is a square matrix with linearly independent columns.
+
+NORMS
+
+In Ml, we measure size of vectors using a functioon called norm. L^p norm is given by (sum(x^p))^(1/p)
+Norm of vextor x, measures distance from origin to point x.
+L^2 is Euclidean norm i.e. Euclidean distance from origin. ||x||subscript{{2}}
+
+L^2 can be calculated as x^t.x
+L^2 norm maybe undesirable because it increases very slowly near the origin, so we turn to L1 norm.
+It is used when difference between 0 and non0 elements is very important.
+
+Diagonal matrix
+The non-diagonal elements are 0. It is important because multiplying by a diagonal matrix very efficient.
+
+Symmentrix matrix: A=At
+Unit vector: vector with unit norm
+
+Orthogonal: if xty=0, they are 90 degree to each other.
+Orthonormal: if vectors are orthogonal and have unit norm
+
+Orthogonal matrices: Is a square matrix whose rows are mutually Orthonormal
+AAt=I, so At=A-1
+
+EIGENDECOMPOSITION
+We can decompose an integer into prime factors, can get info about divisibilty
+Similarly we can decompse a matrix
+Eigen decomposition is where we decompose a matrix into eigen vectors and eigen values
+
+Eigen vector: Eigen vector v of a square matrix A is a nonzeroo vector v, such that multiplication with A only alters scale of v
+Av = lambda.v
+The lambda is the eigen value
+
+If A is the combination of n independent eigen vectors, with corresponding eigenvalues,
+ We can concatenate all vs to form V and lambdas to form lambda
+ Eigen decomposition of A = V.diag(lambda).V-1
+Constructing matrices with specific eigenvalues and eigenvectors enable to stretch space in desired directions
+
+For a symmentric matric A=QVQt
+where Q is orthogonal matricz composed oof eigenvectors of A, diagonal matrix vi,i is associated with eigenvector column i of Q
+Eigendecomposation can be made unique by considering that the elements of v is always in descending order.
+ 
+If all eigenvalues are zero, it is a singular matrix
+If eigenvalues are > 0, positive definite, >=0, positive semidefinite
+
+SINGULAR VALUE DECOMPOSITION
+-It is a way too fectorize natrix into singular vectors and singular values.
+Every matrix has SVD unlike EVD 
+
