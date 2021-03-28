@@ -1,0 +1,18 @@
+NUMERICAL COMPUTATION
+
+Underflow: It is a form of numerical error when numbers near zero is rounded to 0
+Overflow: It is a form of numerical error when numbers with large magnitude are approx as infinity or -infinity
+In many deep learning algorithms, these errors must be taken into consideration whhile writing functions
+
+Gradient optimization
+
+When f`=0, the derivative provides no information on which direction to more, these are critical or stationary points.
+Local minimum is a point where f(x) us lower than all neighboring points
+Critical point can be local minimum, local maximum or saddle point, one side up slope and one side down slope
+Point having absolute lowest is global minimum.
+
+The gradient df is vecrtor of its first partial derivatives
+Hessian d2f is matrix of second partial derivatives
+The jacobian of a function n->m, is matrix of first oartial derivatives
+The Hessian is jacobian of gradient
+Equations at https://www.value-at-risk.net/functions/
